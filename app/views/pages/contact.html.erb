@@ -1,0 +1,13 @@
+<h1>Nous contacter</h1>
+
+
+<form action="/contact" method="get">
+<input type="text" name="member" placeholder="who do you want ?">
+<input type="submit">
+</form>
+
+<ol>
+<% @members.each do |member| %>
+    <li><%= member %></li>
+    <% end %>
+</ol>
