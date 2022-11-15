@@ -1,0 +1,9 @@
+<h1><%= @giftlist.name %></h1>
+
+<%= link_to "back", all_giftlist_path %>
+
+
+<%= link_to "Delete",
+  giftlist_path(@giftlist),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
