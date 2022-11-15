@@ -1,6 +1,10 @@
 class GiftlistsController < ApplicationController
   before_action :set_giftlist, only: [:show, :edit, :update, :destroy]
 
+  def top
+    @giftlists = Giftlist.where(rating: 2)
+    # raise
+  end
   def index
     @giftlists = Giftlist.all
   end
@@ -16,7 +20,7 @@ class GiftlistsController < ApplicationController
 
   def create
     # raise
-    @giftlist = Giflist.new(giftlist_params)
+    @giftlist = Giftlist.new(giftlist_params)
     @giftlist.save
     redirect_to giftlist_path(@giftlist)
   end

@@ -1,0 +1,9 @@
+<h1>Ranking giftlists</h1>
+<div id="giftlists">
+  <% @giftlists.each do |giftlist| %>
+    <%= render giftlist %>
+    <p>
+      <%= link_to "Show this giftlist", giftlist %>
+    </p>
+  <% end %>
+</div>
