@@ -45,6 +45,7 @@ class GiftlistsController < ApplicationController
 
   private
 # private method
+
   def giftlist_params
     params.require(:giftlist).permit(:name, :ranking, :rating)
   end

@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
+  get 'reviews/new'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   Rails.application.routes.draw do
+    get 'reviews/new'
     resources :giftlists do
       collection do
         get :top
       end
+      resources :reviews, only: [:new, :create]
     end
+    resources :reviews, only: [:destroy ]
   end
   # root to: 'pages#home'
   # get 'giftlists/new', to: 'giftlists#new', as: :new_giftlist

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_14_120015) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_15_151559) do
   create_table "giftlists", force: :cascade do |t|
     t.string "name"
     t.integer "price"
@@ -20,4 +20,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_14_120015) do
     t.integer "ranking"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.integer "giftlist_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["giftlist_id"], name: "index_reviews_on_giftlist_id"
+  end
+
+  add_foreign_key "reviews", "giftlists"
 end
