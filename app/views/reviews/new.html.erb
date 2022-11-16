@@ -1,6 +1,6 @@
 <h1>Reviews</h1>
 <%= form_with model: [@giftlist, @review] do |f| %>
   <%= f.label :content %>
-  <%# <%= f.input :content %>
-  <%# <%= f.submit "Submit review" class:"btn" %>
+  <%= f.input :content %>
+  <%= f.submit "Submit review" class:"btn" %>
 <% end %>
