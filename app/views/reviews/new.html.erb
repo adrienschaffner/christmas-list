@@ -1,6 +1,11 @@
-<h1>Reviews</h1>
-<%= form_with model: [@giftlist, @review] do |f| %>
-  <%= f.label :content %>
+<h1>New review</h1>
+<%# <%= form_with model: [@giftlist, @review] do |f| %>
+  <%# <%= f.label :content %>
+  <%# <%= f.input :content %>
+  <%# <%= f.submit "Submit review" class:"btn" %>
+<%# <% end %>
+
+<%= simple_form_for [@giftlist, @review] do |f| %>
   <%= f.input :content %>
-  <%= f.submit "Submit review" class:"btn" %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
 <% end %>

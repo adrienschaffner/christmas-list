@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @review.giftlist = @restaurant
+    @review.giftlist = @giftlist
     if @review.save
       redirect_to giftlist_path(@giftlist)
     else

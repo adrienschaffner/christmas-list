@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       end
       resources :reviews, only: [:new, :create]
     end
-    resources :reviews, only: [:destroy ]
+    resources :reviews, only: [:destroy]
   end
   # root to: 'pages#home'
   # get 'giftlists/new', to: 'giftlists#new', as: :new_giftlist

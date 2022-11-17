@@ -1,6 +1,17 @@
+<p><strong>Reviews</strong></p>
+<ul class="list-group">
+  <% @giftlist.reviews.each do |review| %>
+    <li class="list-group-item"><%= review.content %></li>
+  <% end %>
+</ul>
+<br>
+
 <h1><%= @giftlist.name %></h1>
 
 <%= link_to "back", giftlists_path %>
+<%= link_to "add a review", new_giftlist_review_path(@giftlist) %>
+
+
 
 
 <%= link_to "Delete",
